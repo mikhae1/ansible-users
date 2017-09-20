@@ -1,0 +1,5 @@
+---
+# default is 'password'
+# should be overriden
+
+password: '$6$O1Jcjk202Lsw8DeT$cJQVDesxYvIhaCjLy9fbvxE4cAWIM1YmOoXUNxULOYyG2YT6z1vxFf2rev48JcFCH8Vb64NZ0c73chz8ftiB40'
