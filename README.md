@@ -11,8 +11,8 @@
     ```
       development:
         hosts:
-          - dev-master-srv
-          - dev-slave-srv
+          dev-master-srv:
+          dev-slave-srv:
         vars:
           password: 'myPassword'
           ansible_user: ansible
@@ -28,4 +28,4 @@
 
   - Run Ansible playbook
 
-        ansible-playbook ./users.yml
+        ansible-playbook --ask-become-pass ./users.yml --limit development
