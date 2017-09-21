@@ -8,6 +8,7 @@
   register: check
   failed_when: not check.stat.exists
   with_items: "{{ users }}"
+  when: item.remove is not defined or not item.remove
 
 - name: create users
   user:
