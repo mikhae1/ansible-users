@@ -1,7 +1,8 @@
 # Ansible playbook for managing linux users
 
-  Basic add/remove functionality.
   All users will be asked for password change at first login.
+
+  Default password is `password`.
 
 ## Usage:
 
@@ -24,8 +25,14 @@
 
   - Place public keys for users at `./public_keys` folder:
 
-        ./public_keys/daenerys_t.pub
+        $ ./public_keys/daenerys_t.pub
 
   - Run Ansible playbook
 
-        ansible-playbook --ask-become-pass ./users.yml --limit development
+        $ ansible-playbook --ask-become-pass ./users.yml --limit development
+
+    use tags:
+
+        $ ansible-playbook --ask-become-pass ./users.yml --limit development --tags add
+        $ ansible-playbook --ask-become-pass ./users.yml --limit development --tags remove
+

@@ -1,0 +1,9 @@
+---
+
+- debug: var=users
+
+- include: add.yml
+  tags: add
+
+- include: remove.yml
+  tags: remove

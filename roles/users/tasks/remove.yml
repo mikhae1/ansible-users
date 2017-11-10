@@ -1,0 +1,11 @@
+---
+
+- name: remove users
+  user:
+    name: "{{ item.name }}"
+    state: absent
+    force: yes
+    remove: yes
+  register: deleted
+  with_items: "{{ users }}"
+  when: item.remove is defined and item.remove

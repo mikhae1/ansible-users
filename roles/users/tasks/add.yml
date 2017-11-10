@@ -1,7 +1,5 @@
 ---
 
-- debug: var=users
-
 - name: check for public keys aviable
   become: no
   local_action: stat path=public_keys/{{ item.name }}.pub
@@ -41,13 +39,3 @@
     append: yes
   with_items: "{{ users }}"
   when: item.groups is defined and item.groups
-
-- name: delete users
-  user:
-    name: "{{ item.name }}"
-    state: absent
-    force: yes
-    remove: yes
-  register: deleted
-  with_items: "{{ users }}"
-  when: item.remove is defined and item.remove
