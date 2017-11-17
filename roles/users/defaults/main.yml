@@ -1,5 +1,7 @@
 ---
 # default is 'password'
 # should be overriden
+# use:
+#   python -c "from passlib.hash import sha512_crypt; import getpass; print sha512_crypt.using(rounds=5000).hash(getpass.getpass())"
 
 password: '$6$O1Jcjk202Lsw8DeT$cJQVDesxYvIhaCjLy9fbvxE4cAWIM1YmOoXUNxULOYyG2YT6z1vxFf2rev48JcFCH8Vb64NZ0c73chz8ftiB40'
